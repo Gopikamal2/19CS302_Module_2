@@ -1,42 +1,63 @@
-# EX 9 C program to find the sum of digits using while loop without using modulus operator
+# EX 9 C program to find the sum of odd digits using do while loop.
 ## DATE:
 ## AIM:
-To write a C program to find the sum of digits using while loop without using modulus operator
+To write a C program to find the sum of odd digits using do while loop.
 
 ## Algorithm
+1.Start the program.
 
-1.Start the program and declare variables c, sum, t, and a character array n.
+2.Declare variables for number, digit, and sum.
 
-2.Read the input number as a string using scanf to avoid using the modulus operator.
+3.Get the number from the user.
 
-3.Initialize sum = 0 and c = 0.
+4.Extract each digit using modulo operator.
 
-4.Use a while loop to traverse each digit until the null character ('\0') is reached; convert each character to an integer using t = n[c] - '0' and add it to sum.
+5.Check whether the digit is odd.
 
-5.Display the sum of digits and stop the program.
+6.Add the odd digit to the sum.
+
+7.Repeat the process using do while loop until the number becomes 0.
+
+8.Display the sum.
+
+9.Stop the program.  
 
 ## Program:
 ```
-#include <stdio.h>  
-int main()  
-{  
-   int c, sum, t;  
-   char n[1000];  
-   scanf("%s", n);  
-   sum = c = 0;  
-   while (n[c] != '\0') {  
-      t   = n[c] - '0';   
-      sum = sum + t;  
-      c++;  
-   }  
-   printf("%d",sum);  
-   return 0;  
-}  
+#include <stdio.h>
+
+int main()
+{
+    int n, digit, sum = 0;
+
+    scanf("%d", &n);
+
+    do
+    {
+        digit = n % 10;
+
+        if(digit % 2 != 0)
+        {
+            sum = sum + digit;
+        }
+
+        n = n / 10;
+
+    } while(n != 0);
+
+    printf("%d", sum);
+
+    return 0;
+}
 ```
 
 ## Output:
+```
+12345
 
-<img width="581" height="200" alt="Screenshot 2026-03-19 131230" src="https://github.com/user-attachments/assets/550b287b-57de-4dae-b379-4d7f1a7ca224" />
+9
+```
+
 
 
 ## Result:
