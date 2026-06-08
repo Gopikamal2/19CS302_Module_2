@@ -1,38 +1,61 @@
-# EX 10 C program for finding the factorial of a given number using function without return type with arguments.
+# EX 10 C program to find the factorial of a given number using a function with arguments and return type.
 ## DATE:
 ## AIM:
-To write a C program for finding the factorial of a given number using function without return type with arguments.
+To write a C program to find the factorial of a given number using a function with arguments and return type.
 
 ## Algorithm
+1.Start the program.
 
-1.Start the program and declare required variables (number and result).
+2.Declare a function to calculate factorial.
 
-2.Read the input number from the user.
+3.Get the number from the user.
 
-3.Call a function (e.g., factorial(n)) and pass the number as an argument.
+4.Call the function with the number as argument.
 
-4.Inside the function, initialize a variable (fact = 1) and use a loop to multiply numbers from 1 to   n to calculate the factorial.
+5.Calculate the factorial using loop.
 
-5.Display the factorial result inside the function and end the program.  
+6.Return the factorial value.
 
+7.Display the factorial.
+
+8.Stop the program.
 ## Program:
 ```
-#include<stdio.h>
+#include <stdio.h>
+
+int factorial(int n)
+{
+    int i, fact = 1;
+
+    for(i = 1; i <= n; i++)
+    {
+        fact = fact * i;
+    }
+
+    return fact;
+}
+
 int main()
 {
-    int a,s=1;
-    scanf("%d",&a);
-    for(int i=1;i<=a;i++)
-    {
-        s=s*i;
-    }
-    printf("Factorial value is: %d",s);
+    int n, result;
+
+    scanf("%d", &n);
+
+    result = factorial(n);
+
+    printf("%d", result);
+
+    return 0;
 }
 ```
 
 ## Output:
+```
+5
 
-<img width="709" height="159" alt="Screenshot 2026-03-19 130528" src="https://github.com/user-attachments/assets/a8ef931c-65c4-4d7e-8a67-aa03591b51a3" />
+120
+```
+
 
 
 ## Result:
