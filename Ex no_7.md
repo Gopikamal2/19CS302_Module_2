@@ -1,45 +1,54 @@
-# EX 7  C program to print the triangular  pattern using loop.
+# EX 7 C Program to Print a right triangle star Pattern
 ## DATE:
 ## AIM:
-To write a  C program to print the  triangular  pattern using loop.
+To write a C Program to Print a right triangle star Pattern
 
 ## Algorithm
+1.Start the program.
 
-1.Start the program and declare variables i, j, and column.
+2.Declare integer variables.
 
-2.Read the number of rows (column) from the user using scanf.
+3.Get the number of rows from the user.
 
-3.Use an outer loop from i = column down to 1 to control the number of rows.
+4.Use nested loops to print the star pattern.
 
-4.Use an inner loop from j = 1 to i to print # in each row.
-
-5.Print a newline after each row to form the triangular pattern and end the program.
+5.Stop the program.
 
 ## Program:
 ```
-#include<stdio.h>
+#include <stdio.h>
+
 int main()
 {
-    int i,j,column;
-    scanf("%d",&column);
-    for(i=column;i>=1;i--) 
-    
-    
+    int i, j, n;
+
+    scanf("%d", &n);
+
+    for(i = 1; i <= n; i++)
     {
-        for(j=1;j<=i;j++) 
+        for(j = 1; j <= i; j++)
         {
-            printf("#");
+            printf("* ");
         }
+
         printf("\n");
-        
     }
+
     return 0;
 }
 ```
 
 ## Output:
+```
+5
 
-<img width="402" height="243" alt="Screenshot 2026-03-19 132120" src="https://github.com/user-attachments/assets/a13d6c48-1e06-424e-8a12-12381cd38392" />
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+```
+
 
 
 ## Result:
